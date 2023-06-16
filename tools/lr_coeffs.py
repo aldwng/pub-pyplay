@@ -19,7 +19,7 @@ for line in lines:
     if (key.find('&')):
         key = key.split('&')[0]
         key = key.split('_')[1]
-        seqs.append((key, 1, float(value)))
+        seqs.append((key, 1, abs(float(value))))
 
 df = pd.DataFrame(data=seqs, 
                   columns=['fid', 'count', 'val']).groupby('fid').agg({'count':'sum', 'val':'sum'})
