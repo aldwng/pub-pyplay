@@ -9,16 +9,12 @@ with open(model_file, encoding='UTF-8') as f:
 
 lines = list(filter(None, lines))
 
-def line_split(s):
-    key, value = s.split('\t')
-    return key, value
-
 seqs = []
 for line in lines:
     key, value = line.split('\t')
     if (key.find('&')):
         key = key.split('&')[0]
-        key = key.split('_')[1]
+        key = key.replace('1008_', '')
         seqs.append((key, 1, abs(float(value))))
 
 df = pd.DataFrame(data=seqs, 
