@@ -1,7 +1,7 @@
 import pandas as pd
 
-model_file = 'C:/ds/cvr/cvr_model_1008'
-lr_coeffs = 'C:/ds/cvr/lr_coeffs'
+model_file = 'C:/ds/cvr/app_model_502'
+lr_coeffs = 'C:/ds/cvr/ctr_502_coeffs.csv'
 
 with open(model_file, encoding='UTF-8') as f:
     lines = f.read().split('\n')
@@ -14,7 +14,7 @@ for line in lines:
     key, value = line.split('\t')
     if (key.find('&')):
         key = key.split('&')[0]
-        key = key.replace('1008_', '')
+        key = key.replace('502_', '')
         seqs.append((key, 1, abs(float(value))))
 
 df = pd.DataFrame(data=seqs, 
