@@ -1,6 +1,6 @@
 import snappy
 
-path = 'C:/ds/sohu/fea22.snappy'
+path = 'C:/ds/sohu/j4t9.snappy'
 compressed = open(path, 'rb').read()
 
 decompressor = snappy.hadoop_snappy.StreamDecompressor()
