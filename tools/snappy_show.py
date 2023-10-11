@@ -1,9 +1,10 @@
 import snappy
 
-path = 'C:/ds/sohu/j4t9.snappy'
+path = 'C:/ds/sohu/uprofile.snappy'
 compressed = open(path, 'rb').read()
 
 decompressor = snappy.hadoop_snappy.StreamDecompressor()
+
 print(decompressor.decompress(compressed))
 
 # print(snappy.uncompress(compressed)

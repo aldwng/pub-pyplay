@@ -1,8 +1,8 @@
 import snappy
 import pandas as pd
 
-path = 'C:/ds/sohu/4t9.snappy'
-lr_coeffs = 'C:/ds/cvr/ctr_4t9_coeffs.csv'
+path = 'C:/ds/sohu/m518e4.snappy'
+lr_coeffs = 'C:/ds/cvr/ctr_518_e4_coeffs.csv'
 
 compressed = open(path, 'rb').read()
 
